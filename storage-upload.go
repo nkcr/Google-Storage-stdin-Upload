@@ -62,12 +62,6 @@ func main() {
 		}
 	}
 
-	// Check the existence of the bucket
-	_, err = bkt.Attrs(ctx)
-	if err != nil {
-		log.Fatalf("Error with bucket: %v", err)
-	}
-
 	// Read from stdin
 	print("Reading data")
 	w := bkt.Object(path).NewWriter(ctx)

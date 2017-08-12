@@ -21,7 +21,13 @@ ln -s /usr/local/go/bin/go /usr/local/bin
 
 ## Get dependencies and build
 
-* Download `storage-upload.go` and run `$ go get` within its parent folder.
+* Download `storage-upload.go`
+
+```
+wget https://raw.githubusercontent.com/nkcr/Google-Storage-stdin-Upload/master/storage-upload.go
+```
+ 
+and run `$ go get` within its parent folder.
 * finally run `go build storage-upload.go` to build the executable.
 
 # Usage
@@ -53,4 +59,4 @@ echo "Hello" | upload-sorage -k adfe43d.json -d gs://my_bucker/my_folder/file.t
 
 # Security
 
-The script asks for a **service account** key with the params `-k`. You can create a service account key via your console.cloud.google.com on the section **IAM & Admin**. Then click on **Service accounts**. There you can create a service account key and assigning roles to it. Roles needed are **Storage/Storage Object Creator** if you only want to create files without override, **Storage/Storage Object Admin** if you want to override files or **Storage/Storage Admin** if you want to create new buckets** (via `-p` params). Then don't forget to check **Furnish a new private key** in JSON format. This is the key you will need.
+The script asks for a **service account** key with the params `-k`. You can create a service account key via your console.cloud.google.com on the section **IAM & Admin**. Then click on **Service accounts**. There you can create a service account key and assigning roles to it. Roles needed are **Storage/Storage Object Creator** if you only want to create files without override, **Storage/Storage Object Admin** if you want to override files or **Storage/Storage Admin** if you want to create new buckets (via `-p` params). Then don't forget to check **Furnish a new private key** in JSON format. This is the key you will need.
