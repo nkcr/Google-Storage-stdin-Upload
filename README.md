@@ -75,5 +75,5 @@ $ openssl rsa -in private_key.pem -out public_key.pem -outform PEM -pubout
 Use openssl:
 
 ```
-$ pg_dump my_database | openssl rsautl -encrypt -inkey public_key.pem -pubin | storage-upload -k esdjsj4kds4.json -d gs://bucket/folder/file.dat
+$ pg_dump my_database | openssl rsautl -encrypt -inkey public_key.pem -pubin | storage-upload -k esdjsj4kds4.json -d gs://bucket/folder/$(date +%Y-%m-%d-%H%M).sql.dat
 ´´´
