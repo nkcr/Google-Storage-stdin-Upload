@@ -78,4 +78,4 @@ Use openssl:
 
 ```
 $ pg_dump my_database | openssl rsautl -encrypt -inkey public_key.pem -pubin | storage-upload -k esdjsj4kds4.json -d gs://bucket/folder/$(date +%Y-%m-%d-%H%M).sql.dat
-´´´
+```
