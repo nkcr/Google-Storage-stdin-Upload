@@ -30,7 +30,9 @@ wget https://raw.githubusercontent.com/nkcr/Google-Storage-stdin-Upload/master/s
 and run `$ go get` within its parent folder.
 * finally run `go build storage-upload.go` to build the executable.
 
-## (Optional) Move folder to `/usr/local` then link `ln -s /usr/local/storage-upload/storage-upload /usr/local/bin`
+## (Optional) 
+
+To have the executable in your path, move folder to `/usr/local` then link the executable with `ln -s /usr/local/storage-upload/storage-upload /usr/local/bin`
 
 # Usage
 
